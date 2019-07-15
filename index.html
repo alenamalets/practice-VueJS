@@ -17,6 +17,12 @@
         <hr>
         <p v-html="finishedLink"></p>
     </div>
+    <hr>
+    <div id="app2">
+        <button v-on:click="increase">Cick me</button>
+        <p>{{ counter }}</p>
+        <p v-on:mousemove="updateCoordinates">Coordinates: {{  x }} / {{ y }}</p>
+    </div>
     <script src="index.js" type="text/javascript"></script>
 </body>
 
