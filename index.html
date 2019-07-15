@@ -19,7 +19,7 @@
     </div>
     <hr>
     <div id="app2">
-        <button v-on:click="increase(2, $event)">Cick me</button>
+        <button @click="increase(2, $event)">Cick me</button>
         <p>{{ counter }}</p>
         <p v-on:mousemove="updateCoordinates">
             Coordinates: {{  x }} / {{ y }} -
