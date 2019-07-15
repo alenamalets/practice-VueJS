@@ -27,6 +27,16 @@
         </p>
         <input type="text" v-on:keyup.enter.space="alertMe">
     </div>
+    <hr>
+    <div id="app3">
+        <input type="text" v-model="name">
+        <p>{{ name }}</p>
+        <button v-on:click="counter++">Increase</button>
+        <button v-on:click="counter--">Decrease</button>
+        <button v-on:click="secondCounter++">Increase 2</button>
+        <p>COUNTER: {{ counter }} | {{ secondCounter }}</p>
+        <p>RESULT: {{ result() }} | {{ output }}</p>
+     </div>
     <script src="index.js" type="text/javascript"></script>
 </body>
 

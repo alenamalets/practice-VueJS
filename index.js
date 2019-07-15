@@ -42,3 +42,23 @@ new Vue({
         }
     }   
 })
+
+new Vue({
+    el: '#app3',
+    data: {
+        name: "Bob",
+        counter: 0,
+        secondCounter: 0,
+    },
+    computed: {
+        output: function() {
+            return this.counter > 5 ? 'YES' : 'NO';
+        }
+    },
+    methods: {
+        result() {
+            return this.counter > 5 ? 'YES' : 'NO';
+        }
+    }
+   
+})
