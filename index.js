@@ -55,6 +55,14 @@ new Vue({
             return this.counter > 5 ? 'YES' : 'NO';
         }
     },
+    watch: {
+        counter (value) {
+            const vm = this;
+            setTimeout(function() {
+                vm.counter=0;
+            }, 2000)
+        }
+    },
     methods: {
         result() {
             return this.counter > 5 ? 'YES' : 'NO';

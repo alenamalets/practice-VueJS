@@ -1,7 +1,8 @@
 new Vue({
         el: '#exercise',
         data: {
-            value: ''
+            value: '',
+            myvalue: ''
         },
         methods: {
             showAlert: function() {
