@@ -37,5 +37,8 @@ new Vue({
         //     event.stopPropagation();
             
         // }
+        alertMe: function () {
+            alert('YES!');
+        }
     }   
 })
