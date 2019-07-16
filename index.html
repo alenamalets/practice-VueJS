@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="vue.js"></script>
+    <link rel="stylesheet" href="style.css">
     <title>VUE</title>
 </head>
 
@@ -36,6 +37,16 @@
         <button v-on:click="secondCounter++">Increase 2</button>
         <p>COUNTER: {{ counter }} | {{ secondCounter }}</p>
         <p>RESULT: {{ result() }} | {{ output }}</p>
+     </div>
+     <hr>
+     <hr>
+     <hr>
+     <div id="app4">
+        <div class="demo" @click="attachedRed = !attachedRed" :class="colorChanged"></div>
+        <div class="demo" :class="{red: attachedRed}"></div>
+        <div class="demo" :class="[color, {red: attachedRed}]"></div>
+
+        <input type="text" v-model="color">
      </div>
     <script src="index.js" type="text/javascript"></script>
 </body>

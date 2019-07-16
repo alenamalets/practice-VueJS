@@ -70,3 +70,19 @@ new Vue({
     }
    
 })
+
+new Vue({
+    el: '#app4',
+    data: {
+        attachedRed:false,
+        color: 'green'
+    },
+    computed: {
+        colorChanged() {
+            return {
+                red: this.attachedRed,
+                blue: !this.attachedRed,
+            }   
+        }
+    }
+})
