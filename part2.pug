@@ -12,8 +12,17 @@ html
         #app
             p(v-if="show") You can see me!
             p(v-else) Else statement
-            p You can also see me!
+            p(v-show="show") You can also see me!
             button(@click="show = !show") Switch
+            template(v-if="show")
+                h1 Heading
+                p some paragraph
+        #app2
+            ul
+                li(v-for="(ing, i) in ingredients") {{ ing }} ({{ i }})
+            template(v-for="(ing, i) in ingredients")
+                h1 {{ ing }}
+                p {{ i }}
 
 
         script(src="../part2.js" type="text/javascript")
