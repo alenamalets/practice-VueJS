@@ -8,6 +8,12 @@
     <title>Part2</title>
   </head>
   <body>
+    <div id="app">
+      <p v-if="show">You can see me!</p>
+      <p v-else>Else statement</p>
+      <p>You can also see me!</p>
+      <button @click="show = !show">Switch</button>
+    </div>
     <script src="../part2.js" type="text/javascript"></script>
   </body>
 </html>

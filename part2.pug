@@ -6,6 +6,15 @@ html
         meta(http-equiv="X-UA-Compatible" content="ie=edge")
         script(src="../vue.js")
         title Part2
+
+
     body
+        #app
+            p(v-if="show") You can see me!
+            p(v-else) Else statement
+            p You can also see me!
+            button(@click="show = !show") Switch
+
+
         script(src="../part2.js" type="text/javascript")
         
