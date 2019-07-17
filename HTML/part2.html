@@ -20,12 +20,19 @@
     </div>
     <div id="app2">
       <ul>
-        <li v-for="(ing, i) in ingredients">{{ ing }} ({{ i }})</li>
+        <li v-for="(ing, i) in ingredients" :key="ing">{{ ing }} ({{ i }})</li>
       </ul>
+      <button @click="ingredients.push('spices')">Add</button>
       <template v-for="(ing, i) in ingredients">
         <h1>{{ ing }}</h1>
         <p>{{ i }}</p>
       </template>
+      <hr>
+      <ul>
+        <li v-for="person in persons">{{ person.name }}
+          <div v-for="(value, key, index) in person">{{ key }} : {{ value }} ({{ index }})</div>
+        </li>
+      </ul><span v-for="n in 10">{{ n }}</span>
     </div>
     <script src="../part2.js" type="text/javascript"></script>
   </body>

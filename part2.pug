@@ -19,10 +19,16 @@ html
                 p some paragraph
         #app2
             ul
-                li(v-for="(ing, i) in ingredients") {{ ing }} ({{ i }})
+                li(v-for="(ing, i) in ingredients" :key="ing") {{ ing }} ({{ i }})
+            button(@click="ingredients.push('spices')") Add
             template(v-for="(ing, i) in ingredients")
                 h1 {{ ing }}
                 p {{ i }}
+            hr
+            ul
+                li(v-for="person in persons") {{ person.name }}
+                    div(v-for="(value, key, index) in person") {{ key }} : {{ value }} ({{ index }})
+            span(v-for="n in 10") {{ n }}
 
 
         script(src="../part2.js" type="text/javascript")
