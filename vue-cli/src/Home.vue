@@ -1,23 +1,15 @@
 <template lang="pug">
     div
-        p Server status: {{ status }}
-        hr
-        button(@click="changeStatus") Change
+        app-server-status(v-for="server in 5") 
 </template>
 
 <script>
-export default {
-    data(){
-        return {
-            status: 'Critical'
-        }
-    },
-    methods: {
-        changeStatus(){
-            this.status = 'Normal';
-        }
-    },
-}
+    import Status from './Status.vue'
+    export default {
+    components: {
+        'app-server-status': Status
+    }
+    }
 </script>
 
 <style lang="scss">

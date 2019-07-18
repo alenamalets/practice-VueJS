@@ -1,5 +1,5 @@
 <template lang="pug">
-  app-server-status
+  app-server
 </template>
 
 <script>
